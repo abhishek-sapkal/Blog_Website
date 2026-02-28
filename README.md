@@ -1,2 +1,4 @@
 # Blog_Website
-This is Blog Website Project
+The Website is about the Daily blogs
+This is Website Project
+
