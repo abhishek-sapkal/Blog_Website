@@ -10,6 +10,11 @@
 <body>
     <header>
         <h1>My Blog</h1>
+        <button class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -43,5 +48,24 @@
     <footer>
         <p>&copy; 2026 My Blog. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Navigation Toggle Functionality
+        const navToggle = document.getElementById('navToggle');
+        const nav = document.querySelector('nav');
+
+        navToggle.addEventListener('click', function() {
+            navToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when a nav link is clicked
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                navToggle.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
